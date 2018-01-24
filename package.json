@@ -12,5 +12,8 @@
   },
   "author": "",
   "license": "Apache 2.0",
-  "dependencies": {}
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2"
+  }
 }

@@ -62,6 +62,7 @@ const createAddItemButton = function(){
 const displayTodo = function(){
   document.getElementById('div').innerHTML = "";
   let text = this.responseText;
+  console.log(text[0]);
   text = JSON.parse(text);
   let buttonId = 0;
   text.forEach((todo)=>{
@@ -95,10 +96,11 @@ const loadData = function(){
 }
 
 const sendRequest = function(method,url,callback,data){
-  let xReq = new XMLHttpRequest();
-  xReq.open(method,url);
-  xReq.addEventListener('load',callback);
-  xReq.send(data);
+  let req = new XMLHttpRequest();
+  req.open(method,url);
+  req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  req.addEventListener('load',callback);
+  req.send(data);
 }
 
 window.onload = loadData;

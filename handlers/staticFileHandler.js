@@ -3,7 +3,7 @@ let fs = require('fs');
 
 class StaticFileHandler extends DefaultHandler {
   constructor(root) {
-    super()
+    super();
     this.root = root;
   }
   getFilePath(url) {
@@ -24,7 +24,7 @@ class StaticFileHandler extends DefaultHandler {
     let fileExtension = filePath.slice(filePath.lastIndexOf('.'));
     return contentTypes[fileExtension];
   }
-  execute(req, res) {
+  execute(req,res) {
     let data;
     let htmlFiles = ['/login', '/home', '/login.html', '/home.html'];
     if (!res.finished && req.method=='GET') {
@@ -35,9 +35,8 @@ class StaticFileHandler extends DefaultHandler {
       } catch (e) {
         return;
       }
-      res.setHeader('Content-Type', this.getContentType(req.url));
-      res.write(data);
-      res.end();
+      // res.setHeader('Content-Type', this.getContentType(req.url));
+      res.send(data);
     }
   }
 }
