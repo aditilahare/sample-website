@@ -9,13 +9,13 @@ class Fs{
 
   }
   existsSync(filePath){
-    return filePath=='./data/data.json';
+    return filePath=="./data/data.json";
   }
   readFileSync(filePath,encoding){
-    if(this.existsSync(filePath) && encoding=='utf8'){
+    if(this.existsSync(filePath) && encoding=="utf8"){
       return JSON.stringify(this._contents);
     }else{
-      throw new Error('file not found!');
+      throw new Error("file not found!");
     }
   }
 }

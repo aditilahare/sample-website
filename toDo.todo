@@ -1,6 +1,7 @@
 bugs:
   ☐ viewing todo after adding has issues displaying.
   ☐ fix all skipped test.
+  ☐ if username is baduser and password is 1,test should pass.
 
 
 todo:

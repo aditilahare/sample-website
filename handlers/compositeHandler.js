@@ -1,8 +1,8 @@
-let DefaultHandler = require('./defaultHandler.js');
+const DefaultHandler = require("./defaultHandler.js");
 
 class CompositeHandler extends DefaultHandler{
   constructor() {
-    super()
+    super();
     this.allHandlers = [];
   }
   addHandler(handler){

@@ -1,4 +1,4 @@
-const Item = require('./item.js').Item;
+const Item = require("./item.js").Item;
 
 class Todo{
   constructor(title,description){
@@ -19,7 +19,7 @@ class Todo{
     return this._items;
   }
   addItem(item){
-    let newItem = new Item(item);
+    const newItem = new Item(item);
     this._items.push(newItem);
   }
   updateTitle(newTitle){

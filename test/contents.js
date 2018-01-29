@@ -1,5 +1,5 @@
 const dummyData = function(){
-  let contents = {
+  const contents = {
     "Aditi": {
       "_userName": "Aditi",
       "_todos": [
@@ -19,5 +19,5 @@ const dummyData = function(){
     }
   };
   return contents;
-}
+};
 exports.dummyData = dummyData;

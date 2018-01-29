@@ -1,5 +1,5 @@
-let DefaultHandler = require('./defaultHandler.js');
-let fs = require('fs');
+const DefaultHandler = require("./defaultHandler.js");
+const fs = require("fs");
 
 class StaticFileHandler extends DefaultHandler {
   constructor(root) {
@@ -10,32 +10,31 @@ class StaticFileHandler extends DefaultHandler {
     return `./${this.root}${url}`;
   }
   getContentType(filePath) {
-    let contentTypes = {
-      '.js': 'text/javascript',
-      '.html': 'text/html',
-      '.css': 'text/css',
-      '.jpeg': 'image/jpeg',
-      '.txt': 'text/plain',
-      '.pdf': 'application/pdf',
-      '.jpg': 'image/jpg',
-      '.gif': 'image/gif',
-      '.ico': 'image/ico'
-    }
-    let fileExtension = filePath.slice(filePath.lastIndexOf('.'));
+    const contentTypes = {
+      ".js": "text/javascript",
+      ".html": "text/html",
+      ".css": "text/css",
+      ".jpeg": "image/jpeg",
+      ".txt": "text/plain",
+      ".pdf": "application/pdf",
+      ".jpg": "image/jpg",
+      ".gif": "image/gif",
+      ".ico": "image/ico"
+    };
+    const fileExtension = filePath.slice(filePath.lastIndexOf("."));
     return contentTypes[fileExtension];
   }
   execute(req,res) {
     let data;
-    let htmlFiles = ['/login', '/home', '/login.html', '/home.html'];
-    if (!res.finished && req.method=='GET') {
+    const htmlFiles = ["/login", "/home", "/login.html", "/home.html"];
+    if (!res.finished && req.method=="GET") {
       if(htmlFiles.includes(req.url))
-        req.url += '.html';
+      {req.url += ".html";}
       try {
-        data = fs.readFileSync(this.getFilePath(req.url), 'utf8');
+        data = fs.readFileSync(this.getFilePath(req.url), "utf8");
       } catch (e) {
         return;
       }
-      // res.setHeader('Content-Type', this.getContentType(req.url));
       res.send(data);
     }
   }
