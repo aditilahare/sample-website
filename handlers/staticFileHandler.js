@@ -26,15 +26,19 @@ class StaticFileHandler extends DefaultHandler {
   }
   execute(req,res) {
     let data;
+    let filePath;
     const htmlFiles = ["/login", "/home", "/login.html", "/home.html"];
     if (!res.finished && req.method=="GET") {
       if(htmlFiles.includes(req.url))
-      {req.url += ".html";}
+        req.url += ".html";
       try {
-        data = fs.readFileSync(this.getFilePath(req.url), "utf8");
+        console.log("======>"+req.url);
+        filePath = this.getFilePath(req.url);
+        data = fs.readFileSync(filePath, "utf8");
       } catch (e) {
         return;
       }
+      res.set('Content-Type',this.getContentType(filePath));
       res.send(data);
     }
   }

@@ -45,9 +45,11 @@ const postLoginAction = function(req,res,next){
 };
 
 const getUserName = function(req){
+  console.log(req.cookies);
   const sessionid = req.cookies.sessionid;
   const user = registered_users.find((u) => u.sessionid==sessionid);
   const userName = user["userName"];
+  console.log('username = '+userName);
   return userName;
 };
 
@@ -91,6 +93,7 @@ const addItem = function(req,res,next){
   const item = req.body.item;
   const index = req.body.index;
   const userName = getUserName(req);
+  console.log(userName);
   let items = appLib.users[userName].getItems(index);
   if(item!=""){
     appLib.users[userName].addItem(index,item);
