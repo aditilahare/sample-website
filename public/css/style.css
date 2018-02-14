@@ -1,3 +1,82 @@
-.loginForm {
-  font-family: 'Roboto Condensed',sans-serif;
+/* body{
+  background: rgba(201,201,201,1);
+  background: -moz-linear-gradient(left, rgba(201,201,201,1) 0%, rgba(209,209,209,1) 53%, rgba(217,217,217,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(201,201,201,1)), color-stop(53%, rgba(209,209,209,1)), color-stop(100%, rgba(217,217,217,1)));
+  background: -webkit-linear-gradient(left, rgba(201,201,201,1) 0%, rgba(209,209,209,1) 53%, rgba(217,217,217,1) 100%);
+  background: -o-linear-gradient(left, rgba(201,201,201,1) 0%, rgba(209,209,209,1) 53%, rgba(217,217,217,1) 100%);
+  background: -ms-linear-gradient(left, rgba(201,201,201,1) 0%, rgba(209,209,209,1) 53%, rgba(217,217,217,1) 100%);
+  background: linear-gradient(to right, rgba(201,201,201,1) 0%, rgba(209,209,209,1) 53%, rgba(217,217,217,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#d9d9d9', GradientType=1 );
+} */
+body {
+  /* background: #3E554A; */
+/* background: -moz-radial-gradient(center, ellipse cover, #197a94 0%, #a5d6e3 0%, #86c4d5 49%, #86c4d5 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #197a94), color-stop(0%, #a5d6e3), color-stop(49%, #86c4d5), color-stop(100%, #86c4d5));
+background: -webkit-radial-gradient(center, ellipse cover, #197a94 0%, #a5d6e3 0%, #86c4d5 49%, #86c4d5 100%);
+background: -o-radial-gradient(center, ellipse cover, #197a94 0%, #a5d6e3 0%, #86c4d5 49%, #86c4d5 100%);
+background: -ms-radial-gradient(center, ellipse cover, #197a94 0%, #a5d6e3 0%, #86c4d5 49%, #86c4d5 100%);
+background: radial-gradient(ellipse at center, #197a94 0%, #a5d6e3 0%, #86c4d5 49%, #86c4d5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#197a94', endColorstr='#86c4d5', GradientType=1 );
+background-repeat: no-repeat; */
+height: 100vh;
+}
+form {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  /* background: #2D6E12; */
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0; 
+  margin:auto;
+  padding: 40px;
+   box-sizing: border-box;
+   box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+
+   border-radius: 10px 10px 10px 10px;
+   /* -moz-border-radius: 10px 10px 10px 10px;
+   -webkit-border-radius: 10px 10px 10px 10px; */
+   border: 0px solid #000000;
+}
+
+.userAndPass{
+  text-align: center;
+  /* width: 100%; */
+  /* height: 90px; */
+  /* position: relative;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0; */
+  /* margin: auto; */
+}
+.username{
+  width: 100%;
+}
+.pwd{
+
+}
+#name{
+  /* width: 100%; */
+  /* height: 20px; */
+}
+#password{
+  /* width: 100%; */
+  /* height: 20px; */
+}
+#login{
+  text-align: center;
+  width: 100%;
+  /* height: 20px; */
+}
+
+
+
+#login{
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-left: 35%;
 }

@@ -2,14 +2,15 @@
   "name": "to-do-app",
   "version": "3.0.0",
   "description": "A app that will provide a features for write down our to do list.",
-  "main": "todo-aditilahare/server.js",
+  "main": "server.js",
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^3.4.2",
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start" : "node server"
   },
   "author": "",
   "license": "Apache 2.0",
