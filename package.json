@@ -1,7 +1,7 @@
 {
-  "name": "to-do-app",
+  "name": "sample-website",
   "version": "3.0.0",
-  "description": "A app that will provide a features for write down our to do list.",
+  "description": "Sample website.",
   "main": "server.js",
   "devDependencies": {
     "chai": "^4.1.2",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "start" : "node server"
+    "start": "node server"
   },
   "author": "",
   "license": "Apache 2.0",

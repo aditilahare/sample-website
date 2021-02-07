@@ -1,9 +1,0 @@
-bugs:
-  ☐ viewing todo after adding has issues displaying.
-  ☐ fix all skipped test.
-  ☐ if username is baduser and password is 1,test should pass.
-
-
-todo:
-  ✔ format data structure as planned. @done(2018-01-20 16:40) @project(todo)
-  ☐ find a way to delete todo.
